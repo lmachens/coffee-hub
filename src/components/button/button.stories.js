@@ -3,4 +3,4 @@ import button from "./button.html";
 
 export default { title: "Button" };
 
-export const withText = () => button;
+export const addToCart = () => button;

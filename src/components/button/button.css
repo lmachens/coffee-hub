@@ -1,4 +1,9 @@
 .btn {
   color: white;
-  background: black;
+  background: #cf9775;
+  font-size: 1.1rem;
+  border-radius: 28px;
+  padding: 16px 54px;
+  border: none;
+  box-shadow: 0 28px 40px #cf977570;
 }
