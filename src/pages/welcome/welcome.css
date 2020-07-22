@@ -1,0 +1,8 @@
+.welcome {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../../assets/bg.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
