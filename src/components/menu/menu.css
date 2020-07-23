@@ -1,0 +1,15 @@
+.coffee-nav {
+  display: flex;
+  border: none;
+  background-color: #fff;
+  border-radius: 46px 46px 0 0;
+  justify-content: space-around;
+  align-items: center;
+  height: 92px;
+  box-shadow: 0 2px 88px 0 #fde9da;
+}
+
+.coffee-nav__button {
+  border: none;
+  background: transparent;
+}
