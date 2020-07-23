@@ -1,6 +1,6 @@
 import "./menu.css";
 import menu from "./menu.html";
 
-export default { title: "menu" };
+export default { title: "Menu" };
 
-export const menue = () => menu;
+export const basic = () => menu;
