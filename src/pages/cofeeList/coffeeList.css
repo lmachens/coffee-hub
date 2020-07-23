@@ -1,0 +1,22 @@
+.grid-container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 50px 92px auto 92px;
+}
+
+.grid-appbar {
+  grid-row: 1 / 2;
+}
+
+.grid-typography {
+  grid-row: 2 / 3;
+}
+
+.grid-list {
+  grid-row: 3 / 4;
+  overflow: auto;
+}
+
+.grid-footer {
+  grid-row: 4 / 5;
+}

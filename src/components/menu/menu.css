@@ -10,6 +10,7 @@
   align-items: center;
   height: 92px;
   box-shadow: 0 2px 88px 0 #fde9da;
+  width: 100%;
 }
 
 .coffee-nav__button {
