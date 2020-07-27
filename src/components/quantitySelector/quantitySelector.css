@@ -20,18 +20,25 @@
   border: none;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
-.quantitySelector > button:first-child {
+.quantitySelector__minus {
   border-radius: 100px 0 0 100px;
   padding-left: 12px;
 }
 
-.quantitySelector > button:last-child {
+.quantitySelector__plus {
   border-radius: 0 100px 100px 0;
   padding-right: 12px;
 }
 
 .quantitySelector > button > svg {
   fill: #fff;
+}
+
+.quantitySelector__minus:disabled,
+.quantitySelector__plus:disabled {
+  background: grey;
+  cursor: auto;
 }
