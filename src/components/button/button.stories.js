@@ -7,6 +7,30 @@ function createButton(buttonText) {
   button.className = "btn";
   const text = document.createTextNode(buttonText);
   button.append(text);
+
+  // button.addEventListener("click", function handleClick() {
+  //   alert("Button clicked");
+  // });
+
+  // button.addEventListener("click", function () {
+  //   alert("Button clicked");
+  // });
+
+  button.addEventListener("click", () => {
+    alert("Button clicked");
+  });
+
+  // function handleClick() {
+  //   alert("Button clicked");
+  // }
+  // button.addEventListener("click", handleClick);
+
+  // const handleClick = () => {
+  //   alert("Button clicked");
+  // };
+  // button.addEventListener("click", handleClick);
+  // button.addEventListener("contextmenu", handleClick);
+
   return button;
 }
 
