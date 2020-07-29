@@ -3,23 +3,15 @@ import plusSrc from "../../assets/plus.svg";
 import { createElement } from "../../utils/elements";
 
 export const createQuantitySelector = () => {
-  // Outer div
-  //   const quantitySelector = document.createElement("div");
-  //   quantitySelector.className = "quantitySelector";
   const quantitySelector = createElement("div", {
     className: "quantitySelector",
   });
 
-  // First button (Minus)
-  //   const minusButton = document.createElement("button");
-  //   minusButton.className = "quantitySelector__minus";
-  //   minusButton.disabled = true;
   const minusButton = createElement("button", {
     className: "quantitySelector__minus",
     disabled: true,
   });
 
-  // Minus image
   const minusImage = createElement("img", {
     src: minusSrc,
     alt: "Minus",
@@ -27,18 +19,15 @@ export const createQuantitySelector = () => {
 
   minusButton.append(minusImage);
 
-  // Result
   const resultElement = createElement("div", {
     className: "quantitySelector__result",
     innerText: "1",
   });
 
-  // Second button (Plus)
   const plusButton = createElement("button", {
     className: "quantitySelector__plus",
   });
 
-  // Plus image
   const plusImage = createElement("img", {
     src: plusSrc,
     alt: "Plus",
@@ -50,7 +39,6 @@ export const createQuantitySelector = () => {
   quantitySelector.append(resultElement);
   quantitySelector.append(plusButton);
 
-  // Add event listeners
   minusButton.addEventListener("click", () => {
     const oldResult = Number(resultElement.innerHTML);
     if (oldResult === 2) {
