@@ -10,6 +10,7 @@ export const createQuantitySelector = () => {
   const minusButton = createElement("button", {
     className: "quantitySelector__minus",
     disabled: true,
+    type: "button",
   });
 
   const minusImage = createElement("img", {
@@ -19,13 +20,18 @@ export const createQuantitySelector = () => {
 
   minusButton.append(minusImage);
 
-  const resultElement = createElement("div", {
-    className: "quantitySelector__result",
-    innerText: "1",
+  const resultElement = createElement("input", {
+    className: "quantitySelector__input",
+    value: "1",
+    type: "number",
+    min: 1,
+    max: 9,
+    name: "quantity",
   });
 
   const plusButton = createElement("button", {
     className: "quantitySelector__plus",
+    type: "button",
   });
 
   const plusImage = createElement("img", {
@@ -40,19 +46,25 @@ export const createQuantitySelector = () => {
   quantitySelector.append(plusButton);
 
   minusButton.addEventListener("click", () => {
-    const oldResult = Number(resultElement.innerHTML);
+    const oldResult = Number(resultElement.value);
     if (oldResult === 2) {
       minusButton.disabled = true;
     }
-    resultElement.innerHTML = oldResult - 1;
+    if (oldResult === 9) {
+      plusButton.disabled = false;
+    }
+    resultElement.value = oldResult - 1;
   });
 
   plusButton.addEventListener("click", () => {
-    const oldResult = Number(resultElement.innerHTML);
+    const oldResult = Number(resultElement.value);
     if (oldResult === 1) {
       minusButton.disabled = false;
     }
-    resultElement.innerHTML = oldResult + 1;
+    if (oldResult === 8) {
+      plusButton.disabled = true;
+    }
+    resultElement.value = oldResult + 1;
   });
 
   return quantitySelector;

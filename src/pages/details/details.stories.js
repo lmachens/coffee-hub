@@ -17,20 +17,16 @@ export const basic = () => {
 
   const form = createElement("form", { className: "details__form" });
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-  });
-
   const coffeeName = createElement("div", { innerText: "Macchiato" });
   const price = createElement("div", { innerText: "$2.80" });
   coffeeName.append(price);
 
   const coffeeSize = createElement("label", { innerText: "Size" });
-  const size = createElement("input");
+  const size = createElement("input", { name: "size" });
   coffeeSize.append(size);
 
   const coffeeSugar = createElement("label", { innerText: "Sugar" });
-  const sugar = createElement("input");
+  const sugar = createElement("input", { name: "sugar" });
   coffeeSugar.append(sugar);
 
   const quantitySelector = createQuantitySelector();
@@ -45,6 +41,17 @@ export const basic = () => {
   form.append(button);
 
   main.append(form);
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+    // List key/value pairs https://javascript.info/formdata
+    for (let [name, value] of formData) {
+      console.log(`${name} = ${value}`); // key1=value1, then key2=value2
+    }
+    alert("form submitted. see console for values");
+  });
 
   return main;
 };

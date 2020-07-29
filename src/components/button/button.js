@@ -4,10 +4,6 @@ export function createButton(buttonText) {
   const text = document.createTextNode(buttonText);
   button.append(text);
 
-  button.addEventListener("click", () => {
-    alert("Button clicked");
-  });
-
   return button;
 }
 
