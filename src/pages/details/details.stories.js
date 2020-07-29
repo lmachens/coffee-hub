@@ -12,7 +12,7 @@ export const basic = () => {
 
   const title = createElement("h2", { innerText: "Macchiato" });
   header.append(title);
-  const img = createElement("img", { src: macchiatoSrc });
+  const img = createElement("img", { src: macchiatoSrc, alt: "Macchiato cup" });
   header.append(img);
 
   const form = createElement("form", { className: "details__form" });
