@@ -3,6 +3,7 @@ import { createButton } from "../../components/button/button";
 import { createQuantitySelector } from "../../components/quantitySelector/quantitySelector";
 import { createElement } from "../../utils/elements";
 import macchiatoSrc from "../../assets/macchiato.svg";
+import { createSizeSelector } from "../../components/sizeSelector/sizeSelector";
 
 export default { title: "Pages/Details" };
 
@@ -15,14 +16,12 @@ export const basic = () => {
   const img = createElement("img", { src: macchiatoSrc, alt: "Macchiato cup" });
   header.append(img);
 
-  const form = createElement("form", { className: "details__form" });
-
   const coffeeName = createElement("div", { innerText: "Macchiato" });
   const price = createElement("div", { innerText: "$2.80" });
   coffeeName.append(price);
 
   const coffeeSize = createElement("label", { innerText: "Size" });
-  const size = createElement("input", { name: "size" });
+  const size = createSizeSelector();
   coffeeSize.append(size);
 
   const coffeeSugar = createElement("label", { innerText: "Sugar" });
@@ -34,6 +33,7 @@ export const basic = () => {
 
   main.append(header);
 
+  const form = createElement("form", { className: "details__form" });
   form.append(coffeeName);
   form.append(quantitySelector);
   form.append(coffeeSize);
