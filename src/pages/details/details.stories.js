@@ -16,6 +16,11 @@ export const basic = () => {
   header.append(img);
 
   const form = createElement("form", { className: "details__form" });
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+
   const coffeeName = createElement("div", { innerText: "Macchiato" });
   const price = createElement("div", { innerText: "$2.80" });
   coffeeName.append(price);
