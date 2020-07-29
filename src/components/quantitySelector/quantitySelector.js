@@ -38,5 +38,22 @@ export const createQuantitySelector = () => {
   quantitySelector.append(resultElement);
   quantitySelector.append(plusButton);
 
+  // Add event listeners
+  minusButton.addEventListener("click", () => {
+    const oldResult = Number(resultElement.innerHTML);
+    if (oldResult === 2) {
+      minusButton.disabled = true;
+    }
+    resultElement.innerHTML = oldResult - 1;
+  });
+
+  plusButton.addEventListener("click", () => {
+    const oldResult = Number(resultElement.innerHTML);
+    if (oldResult === 1) {
+      minusButton.disabled = false;
+    }
+    resultElement.innerHTML = oldResult + 1;
+  });
+
   return quantitySelector;
 };
