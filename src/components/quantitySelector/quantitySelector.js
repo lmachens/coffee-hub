@@ -1,3 +1,6 @@
+import minusSrc from "../../assets/minus.svg";
+import plusSrc from "../../assets/plus.svg";
+
 export const createQuantitySelector = () => {
   // Outer div
   const quantitySelector = document.createElement("div");
@@ -6,8 +9,14 @@ export const createQuantitySelector = () => {
   // First button (Minus)
   const minusButton = document.createElement("button");
   minusButton.className = "quantitySelector__minus";
-  minusButton.innerHTML = "-";
   minusButton.disabled = true;
+
+  // Minus image
+  const minusImage = document.createElement("img");
+  minusImage.src = minusSrc;
+  minusImage.alt = "Minus";
+
+  minusButton.append(minusImage);
 
   // Result
   const resultElement = document.createElement("div");
@@ -17,7 +26,13 @@ export const createQuantitySelector = () => {
   // Second button (Plus)
   const plusButton = document.createElement("button");
   plusButton.className = "quantitySelector__plus";
-  plusButton.innerHTML = "+";
+
+  // Plus image
+  const plusImage = document.createElement("img");
+  plusImage.src = plusSrc;
+  plusImage.alt = "Plus";
+
+  plusButton.append(plusImage);
 
   quantitySelector.append(minusButton);
   quantitySelector.append(resultElement);
