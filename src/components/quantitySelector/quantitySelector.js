@@ -1,36 +1,48 @@
 import minusSrc from "../../assets/minus.svg";
 import plusSrc from "../../assets/plus.svg";
+import { createElement } from "../../utils/elements";
 
 export const createQuantitySelector = () => {
   // Outer div
-  const quantitySelector = document.createElement("div");
-  quantitySelector.className = "quantitySelector";
+  //   const quantitySelector = document.createElement("div");
+  //   quantitySelector.className = "quantitySelector";
+  const quantitySelector = createElement("div", {
+    className: "quantitySelector",
+  });
 
   // First button (Minus)
-  const minusButton = document.createElement("button");
-  minusButton.className = "quantitySelector__minus";
-  minusButton.disabled = true;
+  //   const minusButton = document.createElement("button");
+  //   minusButton.className = "quantitySelector__minus";
+  //   minusButton.disabled = true;
+  const minusButton = createElement("button", {
+    className: "quantitySelector__minus",
+    disabled: true,
+  });
 
   // Minus image
-  const minusImage = document.createElement("img");
-  minusImage.src = minusSrc;
-  minusImage.alt = "Minus";
+  const minusImage = createElement("img", {
+    src: minusSrc,
+    alt: "Minus",
+  });
 
   minusButton.append(minusImage);
 
   // Result
-  const resultElement = document.createElement("div");
-  resultElement.className = "quantitySelector__result";
-  resultElement.innerText = "1";
+  const resultElement = createElement("div", {
+    className: "quantitySelector__result",
+    innerText: "1",
+  });
 
   // Second button (Plus)
-  const plusButton = document.createElement("button");
-  plusButton.className = "quantitySelector__plus";
+  const plusButton = createElement("button", {
+    className: "quantitySelector__plus",
+  });
 
   // Plus image
-  const plusImage = document.createElement("img");
-  plusImage.src = plusSrc;
-  plusImage.alt = "Plus";
+  const plusImage = createElement("img", {
+    src: plusSrc,
+    alt: "Plus",
+  });
 
   plusButton.append(plusImage);
 
