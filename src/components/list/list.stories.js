@@ -1,6 +1,9 @@
 import "./list.css";
-import list from "./list.html";
+import { createList } from "./list";
 
 export default { title: "List" };
 
-export const coffeeList = () => list;
+export const coffeeList = () => {
+  const list = createList();
+  return list;
+};
