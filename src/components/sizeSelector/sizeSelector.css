@@ -1,0 +1,25 @@
+.size input {
+  display: none;
+}
+
+.size img {
+  filter: opacity(0.2);
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.size input:checked ~ img {
+  filter: none;
+}
+
+.size__small {
+  height: 30px;
+}
+
+.size__medium {
+  height: 45px;
+}
+
+.size__large {
+  height: 60px;
+}

@@ -3,14 +3,6 @@
   align-items: stretch;
 }
 
-.quantitySelector > div {
-  font-size: 1.1rem;
-  color: #2d140d;
-  padding: 4px 14px;
-  flex-grow: 1;
-  text-align: center;
-}
-
 .quantitySelector > button {
   color: white;
   background: #cf9775;
@@ -41,4 +33,19 @@
 .quantitySelector__plus:disabled {
   background: grey;
   cursor: auto;
+}
+
+.quantitySelector__input {
+  border: none;
+  font-size: 1.1rem;
+  color: #2d140d;
+  padding: 4px 6px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.quantitySelector__input::-webkit-outer-spin-button,
+.quantitySelector__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
